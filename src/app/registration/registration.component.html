@@ -1,0 +1,14 @@
+<div id ='body'>
+  <h2>Register here!</h2>
+  <h3 *ngFor="let error of errors">{{error}}</h3>
+  <form (submit)="createUser()">
+    Username: <input type="text" name="username" [(ngModel)]="newUser.username">
+    <br>
+    Email: <input type="text" name="email" [(ngModel)]="newUser.email">
+    <br>
+    Password: <input type="text" name="password" [(ngModel)]="newUser.password">
+    <br>
+    Password Confirmation: <input type="text" name="passwordConf" [(ngModel)]="newUser.passwordConf">
+    <input type="submit" value="Create">
+  </form>
+</div>
